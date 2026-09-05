@@ -86,8 +86,10 @@
     {{ content }}
   </main>
   <footer class="site">
-    <a href="/privacy-policy">Privacy Policy</a> &middot;
-    <a href="/terms-and-conditions">Terms &amp; Conditions</a> &middot;
+    <!-- Trailing slashes match the permalinks in the front matter. Without them every
+         click costs a 301 to the slashed form, on every page. -->
+    <a href="/privacy-policy/">Privacy Policy</a> &middot;
+    <a href="/terms-and-conditions/">Terms &amp; Conditions</a> &middot;
     <a href="mailto:support@neathippo.com">support@neathippo.com</a>
   </footer>
 </body>

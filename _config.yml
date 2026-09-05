@@ -23,3 +23,7 @@ kramdown:
 exclude:
   - README.md
   - .gitattributes
+  # Jekyll copies any file it is not told to skip into the built site - /CNAME is
+  # downloadable, which is the proof - so the build scripts are excluded rather
+  # than served at neathippo.com/make_shots.py.
+  - tools/
