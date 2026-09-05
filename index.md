@@ -79,7 +79,3 @@ the game.
 <a class="play-badge play-badge--end" href="https://play.google.com/store/apps/details?id=com.neathippo.crazypolyfree">
   <img src="/assets/google-play-badge.png" alt="Get it on Google Play" width="646" height="250">
 </a>
-
----
-
-[Privacy Policy](/privacy-policy/) &middot; [Terms and Conditions](/terms-and-conditions/)

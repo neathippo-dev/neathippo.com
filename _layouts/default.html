@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+<style>
+  :root {
+    --ink: #3a2318;
+    --ink-soft: #6b5344;
+    --paper: #fbf8f3;
+    --rule: #e6ded2;
+    --accent: #b3541e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    /* The legal pages are long and are actually read, sometimes by a parent deciding
+       whether to let a child install this - so body text is 17px with generous line
+       height rather than the 14-15px a marketing page would use. */
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--paper);
+    margin: 0;
+    padding: 32px 20px 96px;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  header.site { max-width: 46rem; margin: 0 auto 40px; }
+  header.site a { font-weight: 600; font-size: 19px; text-decoration: none; }
+  h1 { font-size: 30px; line-height: 1.25; margin: 0 0 8px; }
+  h2 { font-size: 22px; margin: 40px 0 12px; padding-top: 20px; border-top: 1px solid var(--rule); }
+  h3 { font-size: 18px; margin: 28px 0 8px; }
+  a { color: var(--accent); }
+  ul, ol { padding-left: 1.35rem; }
+  li { margin: 6px 0; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 32px 0; }
+  code { background: #f0e9df; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+  /* Google's badge is scaled by width only - height stays auto so the ratio is the
+     asset's own. The PNG is 646x250 with exactly 41px of transparent clear space on all
+     four sides (measured, not guessed), so at a 200px display width the pill itself is
+     52px tall - over the 40px minimum the guidelines set - and carries 12.7px of its own
+     space. The negative left margin cancels that one side so the badge lines up with the
+     text above it; the other three sides are left alone, because that padding is the
+     clear space Google requires and is also what spaces it vertically. */
+  /* The Play feature graphic, reused as the hero. 1024x500 is its native size and wider
+     than the text column, so it only ever scales down. Not lazy - it is the first thing
+     on the page, and lazy-loading what is already in view just delays it. */
+  .hero { width: 100%; height: auto; display: block;
+          border-radius: 12px; margin: 0 0 28px; }
+  .play-badge { display: inline-block; margin: 0 0 4px -12.7px; }
+  .play-badge img { max-width: 200px; height: auto; display: block; }
+  /* The closing call to action: centred, so it reads as the end of the page rather than
+     as another paragraph. Centring means the badge's own clear space no longer needs
+     cancelling, so the negative margin from the top one is dropped here. */
+  .play-badge--end { display: block; width: max-content; margin: 28px auto 0; }
+  /* Screenshots. auto-fit collapses the grid to one column on a phone without a media
+     query of its own. The width/height attributes on each img hold the 16:9 box before
+     the file arrives, so captions do not jump up the page as they load - and everything
+     below the first row is lazy, since most visitors never scroll that far. */
+  .shots { display: grid; gap: 22px 20px; margin: 24px 0 8px;
+           grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .shots figure { margin: 0; }
+  .shots img { width: 100%; height: auto; display: block;
+               border: 1px solid var(--rule); border-radius: 10px; background: #fff; }
+  .shots figcaption { margin-top: 8px; font-size: 15px; line-height: 1.5;
+                      color: var(--ink-soft); }
+  /* The online privacy policy carries two tables (legal bases, processors). They are the
+     reason Google Sites could not hold this document without being flattened by hand. */
+  table { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 15px; }
+  th, td { border: 1px solid var(--rule); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f3ece2; }
+  /* A wide table must scroll inside itself rather than pushing the page sideways. */
+  .table-scroll { overflow-x: auto; }
+  footer.site {
+    max-width: 46rem; margin: 64px auto 0; padding-top: 20px;
+    border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: 15px;
+  }
+  footer.site a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+  <header class="site"><a href="/">NeatHippo</a></header>
+  <main>
+    {{ content }}
+  </main>
+  <footer class="site">
+    <a href="/privacy-policy">Privacy Policy</a> &middot;
+    <a href="/terms-and-conditions">Terms &amp; Conditions</a> &middot;
+    <a href="mailto:support@neathippo.com">support@neathippo.com</a>
+  </footer>
+</body>
+</html>
