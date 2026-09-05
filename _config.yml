@@ -1,0 +1,25 @@
+# GitHub Pages builds this with Jekyll automatically - there is no local build step
+# and nothing to install. Pushing is deploying.
+#
+# The point of using Jekyll at all is that the legal documents stay *markdown*: they are
+# written and reviewed as .md in the game repo (CrazyPoly3/docs/legal), and published by
+# copying the file across and committing it. That replaces the Google Sites ritual in
+# that directory's README - paste into a Google Doc, Paste special, copy into a Sites
+# text box, re-hyperlink by hand, and flatten every table because Sites has no table
+# element. Markdown here renders as written, tables included.
+
+title: NeatHippo
+description: CrazyPoly - a board game about property, rent and ruthless deals.
+url: https://neathippo.com
+
+# Kramdown is what GitHub Pages runs; naming it keeps a local `jekyll serve` identical.
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Files that are not pages. app-ads.txt in particular must be served byte-for-byte at the
+# root, so it is kept well away from anything that might process it.
+exclude:
+  - README.md
+  - .gitattributes

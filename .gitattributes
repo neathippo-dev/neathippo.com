@@ -1,0 +1,3 @@
+# app-ads.txt is parsed by other people's crawlers, so line endings are pinned
+# rather than left to whatever a Windows checkout produces.
+* text=auto eol=lf
