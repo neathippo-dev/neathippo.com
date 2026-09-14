@@ -11,7 +11,8 @@ permalink: /
 
 A free board game about property, rent and ruthless deals. Buy businesses, build them
 up and charge rent until everyone else goes broke — or walk into the bank and help
-yourself, and take your chances with the jail cell.
+yourself, and take your chances with the jail cell. Play it against the people in the
+room, or against the rest of the world.
 
 <!--
   Google's official badge, downloaded unmodified from
@@ -64,11 +65,20 @@ yourself, and take your chances with the jail cell.
 
 ## Playing together
 
+- **Online** — a quick match against players anywhere in the world
+- **Private rooms** — share a six-character code and play with friends only; fill the
+  empty seats with robots or with whoever is looking for a game
+- **Friends** — add the people you enjoyed a game with, and invite them to the next one
 - **Same device** — pass and play around one phone or tablet
 - **Wi-Fi / LAN** — everyone on one network, no internet needed
 - **Robots** — easy, medium and hard, and the hard ones play to win
 
-Available in eleven languages, and it works fully offline.
+At an online table, tap an emoji to say what you think of a deal without typing a word.
+And if you suspect the dice of having it in for you, Dice Stats shows every roll the
+game has actually made.
+
+Available in eleven languages, and every mode except the online one works with no
+connection at all.
 
 ## Support
 
